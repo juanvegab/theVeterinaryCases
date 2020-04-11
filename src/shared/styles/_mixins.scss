@@ -1,0 +1,58 @@
+@mixin transition($x...){
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+  transition: $x;
+}
+
+
+//breakpoints
+
+// Small screen / phone
+$theVetCases-grid-breakpoints-sm: 576px;
+
+// Medium screen / tablet
+$theVetCases-grid-breakpoints-md: 768px;
+
+// Large screen / desktop
+$theVetCases-grid-breakpoints-lg: 1200px;
+
+// Extra large screen / wide desktop
+$theVetCases-grid-breakpoints-xl: 1440px;
+
+@mixin theVetCases-responsive-breakpoint($media) {
+  @if $media == mobile {
+    @media only screen and (min-width: $theVetCases-grid-breakpoints-sm) { @content; }
+  }
+
+  @else if $media == tablet {
+    @media only screen and (min-width: $theVetCases-grid-breakpoints-md) { @content; }
+  }
+
+  @else if $media == desktop {
+    @media only screen and (min-width: $theVetCases-grid-breakpoints-lg) { @content; }
+  }
+
+  @else if $media == large-desktop {
+    @media only screen and (min-width: $theVetCases-grid-breakpoints-xl) { @content; }
+  }
+}
+
+@mixin theVetCases-responsive-only($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $theVetCases-grid-breakpoints-sm) { @content; }
+  }
+
+  @else if $media == tablet {
+    @media only screen and (max-width: $theVetCases-grid-breakpoints-md) { @content; }
+  }
+
+  @else if $media == desktop {
+    @media only screen and (max-width: $theVetCases-grid-breakpoints-lg) { @content; }
+  }
+
+  @else if $media == large-desktop {
+    @media only screen and (max-width: $theVetCases-grid-breakpoints-xl) { @content; }
+  }
+}

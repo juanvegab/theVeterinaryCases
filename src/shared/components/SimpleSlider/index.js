@@ -7,14 +7,14 @@ import s from './style.module.scss';
 class SimpleSlider extends Component {
   render() {
 
-    const { images, height = 400 } = this.props;
+    const { images } = this.props;
 
     const settings = {
       dots: true,
       infinite: true,
       speed: 1000,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1
     };

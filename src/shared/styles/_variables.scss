@@ -1,0 +1,20 @@
+@import './mixins';
+// The Veterinary Cases Styles
+
+// Colors
+$color-white: #fff;
+$color-pomegranate: #e53313;
+$color-bright-turquoise: #1accec;
+$color-dark-transparency: rgba(0, 0, 0, 0.4);
+
+$color-primary: $color-pomegranate;
+$color-secondary: $color-white;
+$color-tertiary: $color-bright-turquoise;
+
+
+%common-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

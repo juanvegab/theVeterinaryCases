@@ -1,0 +1,86 @@
+@import './variables';
+
+.underlinedLink {
+  color: $color-secondary;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+
+  &::after {
+    @include transition(width 0.3s);
+
+    content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    background: $color-secondary;
+    bottom: 0;
+  }
+
+  &:hover {
+    color: $color-secondary;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.underlinedLinkWhite {
+  color: $color-secondary;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+
+  &::after {
+    @include transition(width 0.3s);
+
+    content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    background: $color-secondary;
+    bottom: 0;
+  }
+
+  &:hover {
+    color: $color-secondary;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+
+.lightCta,
+.darkCta {
+  margin: 0 auto;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  position: relative;
+  border: 0;
+  background-color: $color-secondary;
+  color: $color-secondary;
+  width: 100%;
+  max-width: 300px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: 2px 2px 4px #b2b2b2;
+    color: $color-secondary;
+  }
+}
+
+.lightCta {
+  background-color: $color-secondary;
+  color: $color-secondary;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}

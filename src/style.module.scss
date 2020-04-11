@@ -1,0 +1,6 @@
+@import './shared/styles/reset';
+@import './shared/styles/variables';
+
+html {
+  background-color: $color-primary;
+}

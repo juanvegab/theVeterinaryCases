@@ -1,4 +1,12 @@
-.homeWrapper {
+@import '../../styles/variables';
+
+.Home {
+  @extend %common-page;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   .cardsWrapper {
     display: flex;
     justify-content: space-between;

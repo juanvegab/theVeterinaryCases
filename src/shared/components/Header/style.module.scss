@@ -1,0 +1,61 @@
+@import '../../styles/variables';
+
+/* Header */
+.header {
+  $header-height: 120px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: $header-height;
+
+  & > * {
+    height: 100%;
+  }
+
+  .linkItem {
+    // height: $header-height;
+    // line-height: $header-height;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 20px;
+    color: $color-secondary;
+    text-transform: uppercase;
+    font-weight: 400;
+    // display: inline-block;
+
+    &:hover {
+      color: $color-secondary;
+    }
+
+    svg {
+      margin-left: 5px;
+      color: $color-secondary;
+    }
+  }
+
+  .branding {
+    padding-left: 20px;
+
+    & > a {
+      display: block;
+      height: 100%;
+      padding: 7px 0;
+    }
+
+    img {
+      height: 100%;
+
+      @media screen and (max-width: 860px) {
+        max-width: 230px;
+      }
+    }
+  }
+}
