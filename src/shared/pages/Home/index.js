@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import CaseCard from "../../components/CaseCard";
 import s from './style.module.scss';
 import landingImage from '../../images/landingImage.png';
+import ScrollDown from "../../components/ScrollDown";
 
 class Home extends Component {
 
@@ -37,6 +38,9 @@ class Home extends Component {
             : null
           }  
         </div> */}
+        <div className={s.scrollingButton}>
+          <ScrollDown></ScrollDown>
+        </div>
       </div>
     );
   }

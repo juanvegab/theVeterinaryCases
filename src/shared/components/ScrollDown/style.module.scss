@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.ScrollDown {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .indication {
+    color: $color-secondary;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .mouseIcon {
+    position: relative;
+    height: 55px;
+    width: 30px;
+    border: 4px solid $color-secondary;
+    border-radius: 30px;
+
+    &::after {
+      content: '';
+      height: 10px;
+      width: 4px;
+      position: absolute;
+      left: 50%;
+      margin-left: -2px;
+      background-color: $color-secondary;
+      top: 10px;
+      border-radius: 10px;
+    }
+  }
+}
